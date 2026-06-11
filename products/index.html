@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/all.min.css">
+
+</head>
+
+<body>
+
+<body>
+ <!-- Start Header-->
+    <header class="site-header">
+      <!-- Start Top Banner -->
+      <div class="top-banner text-white text-center small">
+        <span class="fw-bold">MEGA SALE</span> <span class="ms-5">Take 10% OFF</span>
+      </div>  
+      <!-- End Top Banner -->   
+      
+      <!-- Start Navbar -->
+      <nav class="navbar navbar-expand-lg px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../Home/index.html">
+            <img src="../img/logo.png" alt="Tailor Logo">
+          </a>
+
+          <button class="navbar-toggler" type="button" 
+                  data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar links (collapse on small screens) -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+              <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="../products/index.html">Products</a></li>
+              <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="#">Shop</a></li>
+              <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="../wedding/index.html">Weddings</a></li>
+              <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="../services/index.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="../contact/index.html">Contact</a></li>
+            </ul>
+          </div>
+
+
+          <div class="icons d-flex align-items-center gap-3">
+            <!-- Profile Dropdown -->
+            <li class="nav-item dropdown list-unstyled">
+              <a class="nav-link text-dark fa-lg dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown">
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="#">My Account</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="../index.html" class="dropdown-item" href="#">Log Out</a></li>
+              </ul>
+            </li>
+
+            <a href="../wishlist/index.html" title="Wishlist" class="text-dark fa-lg"><i class="fa-solid fa-heart"></i></a>
+            <a href="../cart/index.html" title="Your Cart" class="text-dark fa-lg"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" title="Search" class="text-dark fa-lg"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- End Navbar -->      
+    </header>
+    <!-- End Header-->
+  <section class="container-fluid py-4">
+    <div class="row">
+      <div class="col-md-2 col-12">
+        <select name="category" class="form-select" id="selectCategory">
+          
+        </select>
+      </div>
+      <div class="col-md-10 col-12">
+        <div id="loading" class="text-center my-5">
+          <div class="spinner-border text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+        <div class="row px-5" id="cards"></div>
+      </div>
+    </div>
+    
+  </section>
+
+  <footer class=" text-white footer-extra-top pb-4">
+    <div class="container-fluid px-5">
+      <div class="row gy-4">
+        
+        <!-- Column 1 -->
+        <div class="col-md-6 col-lg-3 ">
+          <h5 class="fw-normal fs-6">SIGN UP AND SAVE</h5>
+          <p class="small">
+            Subscribe to get special </br> offers, free giveaways, and</br> once-in-a-lifetime deals.
+          </p>
+          <div class="d-flex align-items-center pb-2 mb-3">
+            <input type="email"
+                  class="form-control bg-transparent p-0 flex-grow-0 email-input-bs"
+                  placeholder="Enter Your Email">
+            <a href="#" class="text-white ms-2">
+              <i class="fa-solid fa-envelopes-bulk"></i>
+            </a>
+          </div>
+
+
+
+          <div class="socials">
+            <a href="#" class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="col-md-6 col-lg-3 ">
+          <h5 class="fw-normal fs-6">LOCATION</h5>
+          <p class="small mb-2">007, James Bond Street,<br>London,<br>England.</p>
+          <p class="small">Mon–Sat 10AM – 9PM<br>Sun: Closed</p>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="col-6 col-lg-2">
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">About</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">FAQ</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Services</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Contact</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Start a Return or Exchange</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div class="col-6 col-lg-2">
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Tailoring</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Made-to-Measure</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Weddings</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Made-to-Order</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 5 -->
+        <div class="col-12 col-lg-2">
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Orders</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Returns</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Terms and Conditions</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Privacy and Policy</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Gifts</a></li>
+            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Refund Policy</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Footer bottom -->
+      <div class="text-center mt-5 pt-3 ">
+        <h6 class="small mb-0">Designed By Muthu Raman</h6>
+      </div>
+    </div>
+  </footer>
+  <!-- Model Start -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="modalTitle" class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body d-flex flex-column flex-md-row gap-4">
+          <img id="modalImage" class="img-fluid rounded" style="max-width:250px;" alt="">
+          <div>
+            <p id="modalDescription"></p>
+            <h5 class="fw-bold text-success" id="modalPrice"></h5>
+            <p class="text-warning" id="modalRating"></p>
+            <p id="modalBrand"></p>
+            <p id="modalCategory"></p>
+            <p id="modalQuantity"></p>
+            <p id="modalMinOrder"></p>
+            <p id="modalDimensions"></p>
+            <p class="icon cart-btn w-100" id="modalCartBtn"  title="add to cart" data-id="${product.id}">
+                <i class="fa-solid fa-cart-shopping text-light"></i>
+                Add to Cart
+            </p>
+            <p class="icon wishlist-btn text-light w-100" id="modalWishlistBtn" title="add to wishlist" data-id="${product.id}">
+                <i class="fa-solid fa-heart text-light"></i>
+                Add to Wishlist
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Model End -->
+
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/all.min.js"></script>
+  <script src="main.js"></script>
+
+
+</body>
+
+</html>
+
+

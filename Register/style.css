@@ -1,0 +1,171 @@
+:root {
+  --main-color: #826300;
+  --main-hover: #d6a300;
+  --grey-color: #d9d9d9;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  margin: 0;
+  background-image: url("./img/bg.jpg"); /* غيّر المسار لو مختلف */
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* أوفرلاي شفاف */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+#register {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeUp 0.7s ease;
+  text-align: left;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* العنوان */
+#register h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+ .form-control {
+        border-radius: 12px !important;
+        border: 1px solid #ddd;
+        padding-left: 10px;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        
+      }
+      .input-group > .form-control{
+        width: auto;
+      }
+.form-control:focus {
+  border-color: var(--main-hover);
+  box-shadow: 0 0 6px rgba(214, 163, 0, 0.4);
+}
+
+/* زرار إظهار/إخفاء الباسورد */
+button[onclick^="togglePassword"] {
+  border: none;
+  background-color: transparent !important;
+  color: #666;
+}
+button[onclick^="togglePassword"]:hover {
+  color: var(--main-hover);
+}
+
+/* الزرار الأساسي */
+.btn-primary {
+  background: linear-gradient(135deg, var(--main-color), var(--main-hover));
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 5px 15px rgba(214, 163, 0, 0.4);
+}
+ .input-group-text {
+        background: transparent;
+        border: none;
+        color: #888;
+        font-size: 1.1rem;
+      }
+      .form-control {
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        padding-left: 10px;
+      }
+      .form-control:focus {
+        border-color: #d6a300;
+        box-shadow: 0 0 5px rgba(214, 163, 0, 0.4);
+      }
+      .input-group > .form-control:focus {
+        z-index: 0;
+      }
+
+      /* زرار إظهار/إخفاء الباسورد */
+      #togglePassword {
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 1rem;
+      }
+      #togglePassword:hover {
+        color: var(--main-hover);
+      }
+
+
+/* التنبيهات */
+.alert {
+  margin-top: 8px;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  display: block;
+  margin-left: auto !important;
+  width: calc(100% - 38px) !important;
+}
+
+
+/* checkbox */
+#register label {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* اللينك */
+#register a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+#register a:hover {
+  color: var(--main-hover);
+}
+
+/* responsive */
+@media (max-width: 576px) {
+  #register {
+    margin: 15px;
+    padding: 20px;
+  }
+  #register h1 {
+    font-size: 1.6rem;
+  }
+}

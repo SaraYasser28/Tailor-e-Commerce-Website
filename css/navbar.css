@@ -1,0 +1,143 @@
+:root {
+  --main-color:#826300;
+  --navbar-color:#FAEDDF;
+  --grey-color:#D9D9D9;
+  --footer-color:#515050;
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Lexend', sans-serif;
+}
+
+/*Start Top Banner*/
+.site-header {
+  position: sticky ;
+  top: 0;
+  z-index: 1030;
+}
+.top-banner {
+  background-color: var(--main-color);
+  padding: 4px 0;       
+  font-size: 0.9rem;   
+  letter-spacing: 0.5px;
+}
+/*End Top Banner*/
+
+/*Start Navbar*/
+.navbar {
+	background: var(--navbar-color);
+	height: 70px;  
+  padding: 0 20px;
+}
+.navbar .navbar-brand img {
+	height: 100px;
+	object-fit: contain;
+}
+.navbar-toggler {
+    border: none; 
+    outline: none; 
+    background: transparent; 
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s;
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--main-color);
+  transition: width 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--main-color) !important;
+}
+.icons a i {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.icons a:hover i {
+  color: var(--main-color) !important; 
+  transform: scale(1.2);
+}
+.dropdown-menu {
+  background-color: var(--main-color); 
+}
+.nav-item.dropdown .dropdown-toggle::after {
+  display: none; 
+}
+.dropdown-item{
+  color: white;
+  transform: none !important; 
+  transition: none !important; 
+}
+.dropdown-item:hover {
+  color: var(--main-color);
+  background-color:white;
+}
+@media (max-width: 992px) {
+  .navbar .navbar-brand img {
+    height: 70px;
+  }
+
+  .navbar-collapse {
+    position: absolute;                
+    top: 100%;                       
+    left: 0;
+    right: 0;
+    background-color: var(--navbar-color) !important;
+    padding: 1rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1000;                   
+  }
+
+  .navbar-collapse.show {
+    max-height: 500px;             
+    opacity: 1;
+  }
+}
+/*End Navbar*/
+
+
+/*Start Footer*/
+footer {
+  background-color: var(--footer-color) ;
+}
+footer .form-control::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+footer a:hover {
+  text-decoration: underline !important;
+}
+footer .socials a {
+  display: inline-block;  
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+footer .socials a:hover {
+  color: rgb(218, 212, 212) !important;
+  transform: scale(1.2) !important;    
+}
+.email-input-bs{
+  width: 200px;             
+  border: none;             
+  border-bottom: 1px solid white;
+  border-radius: 0 !important;   
+}
+.footer-extra-top {
+  padding-top: 6rem !important;
+}
+/*End Footer*/

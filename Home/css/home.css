@@ -1,0 +1,96 @@
+:root {
+  --main-color:#826300;
+  --navbar-color:#FAEDDF;
+  --grey-color:#D9D9D9;
+  --footer-color:#515050;
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Lexend', sans-serif;
+}
+.btn-main {
+  background-color: var(--main-color);
+  color: white;
+}
+.btn-main:hover {
+  background-color: #D6A300;
+}
+/*Start Home*/
+.home{
+  width:100%;
+  background-image: url("../../img/bg-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*End Home*/
+
+/*Start Featured Products*/
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card {
+  cursor: pointer !important;
+}
+.custom-outline-btn {
+  border: 1px solid #B1B1B1;  
+  border-radius: 10px;         
+}
+.custom-outline-btn:hover {
+  border-color: black;        
+  background-color: transparent !important; 
+}
+/*End Featured Products*/
+
+/*Strat Made to Order*/
+.made-to-order{
+  padding: 60px 0px;
+  height: 200px;
+  background-image: url("../../img/bg-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*End Made to Order*/
+
+/*Start Shop Collection*/
+.card {
+  background-color: var(--grey-color); 
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; 
+  padding: 0;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card img {
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 0;
+}
+.label {
+  background-color: white;
+  padding: 3px;
+  width: fit-content;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-weight: 500;
+}
+.collection .container {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+/*End Shop Collection*/
+
+/*Start Services*/
+.services{
+  background-color: var(--grey-color);
+}
+.py-7 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+/*End Services*/

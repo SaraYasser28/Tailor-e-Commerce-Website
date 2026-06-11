@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Elegant White Wedding Dress",
+    "description": "A floor-length bridal gown with lace and satin details.",
+    "price": 1200,
+    "category": "dress",
+    "thumbnail": "data/img/wedding-dress1.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Classic Black Groom Suit",
+    "description": "Tailored black suit with peak lapels, crafted for timeless elegance.",
+    "price": 950,
+    "category": "suit",
+    "thumbnail": "data/img/wedding-suit1.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Bridesmaid Dress",
+    "description": "Soft pastel bridesmaid gown with chiffon layers for a romantic look.",
+    "price": 450,
+    "category": "dress",
+    "thumbnail": "data/img/bridesmaid-dress.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "Modern Navy Groom Suit",
+    "description": "Slim-fit navy suit with subtle texture, ideal for modern weddings.",
+    "price": 1050,
+    "category": "suit",
+    "thumbnail": "data/img/navy-suit.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "Lace Mermaid Wedding Dress",
+    "description": "Mermaid silhouette gown with intricate lace and a sweeping train.",
+    "price": 1500,
+    "category": "dress",
+    "thumbnail": "data/img/wedding-dress2.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "Ivory Tuxedo",
+    "description": "Stylish ivory tuxedo with satin shawl collar for a classy groom look.",
+    "price": 1100,
+    "category": "suit",
+    "thumbnail": "data/img/ivory-tuxedo.jpeg"
+  }
+]

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+        <link rel="icon" href="./img/logo.png" type="image/x-icon">
+    
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --main-color: #826300;
+        --main-hover: #d6a300;
+        --grey-color: #d9d9d9;
+      }
+      body {
+        font-family: "Lexend", sans-serif;
+        margin: 0;
+        background-image: url("./Register/img/bg.jpg");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      /* أوفرلاي فوق الخلفية */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 0;
+      }
+
+      #login {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      /* الكارد */
+      .card {
+        max-width: 420px;
+        width: 100%;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        animation: fadeUp 0.7s ease;
+      }
+
+      @keyframes fadeUp {
+        from {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* زرار Login */
+      .btn-primary {
+        background: linear-gradient(
+          135deg,
+          var(--main-color),
+          var(--main-hover)
+        );
+        border: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        padding: 10px;
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 5px 15px rgba(214, 163, 0, 0.4);
+      }
+      .btn-primary:disabled {
+        opacity: 0.7;
+      }
+
+      /* الحقول */
+      .input-group-text {
+        background: transparent;
+        border: none;
+        color: #888;
+        font-size: 1.1rem;
+      }
+      .form-control {
+        border-radius: 12px !important;
+        border: 1px solid #ddd;
+        padding-left: 10px;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+      }
+      .form-control:focus {
+        border-color: #d6a300;
+        box-shadow: 0 0 5px rgba(214, 163, 0, 0.4);
+      }
+      .input-group > .form-control:focus {
+        z-index: 0;
+      }
+
+      /* زرار إظهار/إخفاء الباسورد */
+      #togglePassword {
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 1rem;
+      }
+      #togglePassword:hover {
+        color: var(--main-hover);
+      }
+
+      /* رسالة الخطأ */
+      #errorMsg {
+        border-radius: 10px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      #errorMsg::before {
+        content: "⚠️";
+      }
+
+      /* النصوص واللينكات */
+      h2 {
+        font-weight: 700;
+        color: #333;
+      }
+      a {
+        color: var(--main-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      a:hover {
+        color: var(--main-hover);
+      }
+
+      /* Responsive */
+      @media (max-width: 576px) {
+        .card {
+          margin: 15px;
+          padding: 20px;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="login">
+      <div class="card shadow-lg p-4 border-0">
+        <h2 class="text-center mb-4">Login</h2>
+        <div class="mb-3 input-group">
+          <span class="input-group-text"
+            ><i class="fa-solid fa-envelope"></i
+          ></span>
+          <input
+            required
+            type="email"
+            class="form-control"
+            id="login-email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="mb-3 input-group position-relative">
+          <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+          <input
+            required
+            type="password"
+            class="form-control"
+            id="login-password"
+            placeholder="Password"
+          />
+          <button
+            type="button"
+            class="position-absolute end-0 top-50 translate-middle-y me-2"
+            id="togglePassword"
+            aria-label="Show or hide password"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+        <button id="btn" class="btn btn-primary w-100 mb-2">
+          <span
+            class="spinner-border spinner-border-sm me-2 d-none"
+            id="loadingSpinner"
+          ></span>
+          Login
+        </button>
+        <div id="errorMsg" class="alert alert-danger d-none">
+          Invalid email or password.
+        </div>
+        <p class="text-center mt-3">
+          Don't have an account? <a href="./Register/index.html">Register</a>
+        </p>
+      </div>
+    </section>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script>
+      const btn = document.getElementById("btn");
+      const loginPassword = document.getElementById("login-password");
+      const togglePassword = document.getElementById("togglePassword");
+      const spinner = document.getElementById("loadingSpinner");
+      const errorMsg = document.getElementById("errorMsg");
+
+      btn.addEventListener("click", function login() {
+        errorMsg.classList.add("d-none");
+        spinner.classList.remove("d-none");
+        btn.disabled = true;
+
+        setTimeout(() => {
+          const email = document.getElementById("login-email").value;
+          const password = loginPassword.value;
+          let users = JSON.parse(localStorage.getItem("user")) || [];
+          const user = users.find(
+            (u) => u.userEmail === email && u.userPassword === password
+          );
+
+          if (user) {
+            localStorage.setItem("loggedInUser", JSON.stringify({ email }));
+            window.location.href = "./Home/index.html";
+          } else {
+            errorMsg.classList.remove("d-none");
+            spinner.classList.add("d-none");
+            btn.disabled = false;
+          }
+        }, 1000);
+      });
+
+      togglePassword.addEventListener("click", function () {
+        if (loginPassword.type === "password") {
+          loginPassword.type = "text";
+          togglePassword.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+        } else {
+          loginPassword.type = "password";
+          togglePassword.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+        }
+      });
+
+      window.onload = function () {
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        if (loggedInUser) {
+          window.location.href = "./Home/index.html";
+        }
+      };
+    </script>
+  </body>
+</html>

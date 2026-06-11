@@ -1,0 +1,102 @@
+body {
+  font-family: "Lexend", sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --main-color:#826300;
+  --grey-color:#D9D9D9;
+}
+/* Hero Section */
+.services-hero {
+  background: url("../../img/bg-4.jpg") center/cover no-repeat;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.services-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55); 
+}
+
+.services-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.services-hero p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Detailed Service Categories */
+
+.service-card , .service-btn {
+  background-color: var(--main-color);
+  color: #fff; 
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+
+.service-card:hover ,.service-btn:hover {
+  background-color: #D6A300; 
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+.service-card h4,
+.service-card p {
+  color: #fff;
+}
+.card.border-0{
+  transition: all 0.5s;
+}
+.card.border-0:hover{
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-10px);
+}
+/* CTA Section */
+.bg-dark {
+  background-color: #222 !important;
+}
+
+.bg-dark h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bg-dark p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Buttons  */
+.btn-main {
+  background-color: var(--main-color); 
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color:#D6A300;
+}
+
+
+

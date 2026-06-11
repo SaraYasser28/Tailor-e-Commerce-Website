@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Collection | Taylor</title>
+
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="css/wedding.css">
+
+    <!-- Lexend Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Start Header-->
+        <header class="site-header">
+                <!-- Start Top Banner -->
+                <div class="top-banner text-white text-center small">
+                    <span class="fw-bold">MEGA SALE</span> <span class="ms-5">Take 10% OFF</span>
+                </div>  
+                <!-- End Top Banner -->   
+                
+                <!-- Start Navbar -->
+                <nav class="navbar navbar-expand-lg px-4">
+                    <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../img/logo.png" alt="Tailor Logo">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" 
+                            data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navbar links (collapse on small screens) -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                        <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="../products/index.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="#">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="../wedding/index.html">Weddings</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="../services/index.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark text-uppercase" href="../contact/index.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="icons d-flex align-items-center gap-3">
+                        <!-- Profile Dropdown -->
+                        <li class="nav-item dropdown list-unstyled">
+                        <a class="nav-link text-dark fa-lg dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="#">My Account</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="loggedOutBtn">Log Out</a></li>
+                        </ul>
+                        </li>
+
+                        <a href="../wishlist/index.html" title="Wishlist" class="text-dark fa-lg"><i class="fa-solid fa-heart"></i></a>
+                        <a href="../cart/index.html" title="Your Cart" class="text-dark fa-lg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" title="Search" class="text-dark fa-lg"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                </nav>
+
+                <!-- End Navbar -->      
+        </header>
+        <!-- End Header-->
+
+        <header class="hero">
+            <div class="container">
+                <h1>Wedding Collection</h1>
+                <p>Celebrate love with timeless suits and elegant dresses, crafted just for your special day.</p>
+            </div>
+        </header>
+
+
+        <!-- Wedding Service Intro -->
+        <section class="py-5 wedding-service">
+        <div class="container text-center">
+            <h2 class="mb-4">Our Wedding Service</h2>
+            <p class="lead text-muted">
+            Weddings are one of life’s most memorable occasions, and we believe every detail should reflect your unique story.  
+            From the groom’s perfectly tailored suit to the bride’s dream gown, our expert team works with you to design, fit, and perfect every stitch.  
+            </p>
+            <div class="row mt-5 g-4">
+            
+            <div class="col-md-4">
+                <div class="p-4 shadow-sm card-custom h-100">
+                <h4>Groom & Groomsmen</h4>
+                <p>Custom-tailored suits and tuxedos, ensuring the groom and his party look sharp and stylish.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="p-4 shadow-sm card-custom h-100">
+                <h4>Bridal & Bridesmaids</h4>
+                <p>From the classic white gown to matching bridesmaid dresses, crafted for elegance and comfort.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="p-4 shadow-sm card-custom h-100">
+                <h4>Complete Packages</h4>
+                <p>Full wedding styling service including fittings, fabric consultations, and alteration support until the big day.</p>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        </section>
+
+        <!-- Filter buttons -->
+        <div class="container wedding-collection my-5">
+            <h2 class="mb-4">Browse Our Wedding Collection</h2>
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="dress">Dresses</button>
+            <button class="filter-btn" data-filter="suit">Suits</button>
+        </div>
+
+
+        <!-- Product Grid -->
+        <section class="pb-5">
+            <div class="container">
+            <div class="row g-4" id="wedding-products-container">
+                <!-- JS injects products -->
+            </div>
+            </div>
+        </section>
+
+        <!-- Start Footer -->
+        <footer class=" text-white footer-extra-top pb-4">
+                    <div class="container-fluid px-5">
+                        <div class="row gy-4">
+                        
+                        <!-- Column 1 -->
+                        <div class="col-md-6 col-lg-3 ">
+                            <h5 class="fw-normal fs-6">SIGN UP AND SAVE</h5>
+                            <p class="small">
+                            Subscribe to get special </br> offers, free giveaways, and</br> once-in-a-lifetime deals.
+                            </p>
+                            <div class="d-flex align-items-center pb-2 mb-3">
+                            <input type="email"
+                                    class="form-control bg-transparent p-0 flex-grow-0 email-input-bs"
+                                    placeholder="Enter Your Email">
+                            <a href="#" class="text-white ms-2">
+                                <i class="fa-solid fa-envelopes-bulk"></i>
+                            </a>
+                            </div>
+
+
+
+                            <div class="socials">
+                            <a href="#" class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Column 2 -->
+                        <div class="col-md-6 col-lg-3 ">
+                            <h5 class="fw-normal fs-6">LOCATION</h5>
+                            <p class="small mb-2">007, James Bond Street,<br>London,<br>England.</p>
+                            <p class="small">Mon–Sat 10AM – 9PM<br>Sun: Closed</p>
+                        </div>
+                        
+                        <!-- Column 3 -->
+                        <div class="col-6 col-lg-2">
+                            <ul class="list-unstyled small">
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">About</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">FAQ</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Services</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Contact</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Start a Return or Exchange</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Column 4 -->
+                        <div class="col-6 col-lg-2">
+                            <ul class="list-unstyled small">
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Tailoring</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Made-to-Measure</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Weddings</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Made-to-Order</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Column 5 -->
+                        <div class="col-12 col-lg-2">
+                            <ul class="list-unstyled small">
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Orders</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Returns</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Terms and Conditions</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Privacy and Policy</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Gifts</a></li>
+                            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Refund Policy</a></li>
+                            </ul>
+                        </div>
+                        
+                        </div>
+                        
+                        <!-- Footer bottom -->
+                        <div class="text-center mt-5 pt-3 ">
+                        <h6 class="small mb-0">Designed By Muthu Raman</h6>
+                        </div>
+                    </div>
+        </footer>
+        <!-- End Footer -->
+
+    <script src="js/wedding.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/all.min.js"></script>
+    </body>
+</html>

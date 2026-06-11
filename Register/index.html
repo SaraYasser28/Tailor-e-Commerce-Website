@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="container my-5 text-center w-75" id="register">
+      <h1>Register</h1>
+      <form action="" name="form">
+        <div class="mb-3 input-group">
+          <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+          <input
+            oninput="validateForm(this)"
+            required
+            type="text"
+            class="form-control"
+            autocomplete="name"
+            id="name"
+            placeholder="Enter Your first Name and last name"
+          />
+          <div class="alert alert-warning rounded-top-0 d-none">
+            You have to write your first and last name
+          </div>
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+          <input
+            oninput="validateForm(this)"
+            required
+            type="email"
+            class="form-control"
+            autocomplete="email"
+            id="email"
+            placeholder="Enter Your Email"
+          />
+          <div class="alert alert-warning d-none">
+            Enter a valid email address
+          </div>
+        </div>
+
+        <div class="mb-3 position-relative input-group">
+          <span class="input-group-text"><i class="fa fa-lock"></i></span>
+          <input
+            oninput="validateForm(this)"
+            required
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter Your Password"
+          />
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-secondary input-group-text"
+            onclick="togglePassword('password', this)"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </button>
+          <div class="alert alert-warning d-none">
+            Your password must be 8–32 characters long and include at least one
+            lowercase letter, one uppercase letter, one number, and one special
+            character.
+          </div>
+        </div>
+
+        <div class="mb-3 position-relative input-group">
+          <span class="input-group-text"><i class="fa fa-lock"></i></span>
+          <input
+            required
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            placeholder="Confirm Your Password"
+          />
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-secondary input-group-text"
+            onclick="togglePassword('confirmPassword', this)"
+          >
+            
+            <i class="fa-solid fa-eye"></i>
+          </button>
+          <div class="alert alert-warning d-none">Passwords do not match</div>
+        </div>
+
+        <div class="mb-3">
+          <input type="checkbox" name="check" id="check" required />
+          <label for="check">I Agree with privacy and policy</label>
+        </div>
+        <div id="required" class="text-center text-danger"></div>
+        <button id="btn" class="btn btn-primary w-100 mb-2">Register</button>
+        <p class="my-3">All ready have an account ? <a href="../index.html">Login</a></p>
+      </form>
+    </section>
+    <script src="../js/all.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
