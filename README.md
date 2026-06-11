@@ -42,6 +42,12 @@ This project was developed as part of Webmaster training in a collaborative team
 * LocalStorage
 * DummyJSON / Fake Store API
 
+## My Contribution
+
+* Developed the Shopping Cart module.
+* Implemented Wishlist functionality.
+* Managed product persistence and user interactions using LocalStorage.
+
 ## Learning Outcomes
 
 This project strengthened my understanding of JavaScript fundamentals, DOM manipulation, API integration, state management using LocalStorage, and building responsive user interfaces with Bootstrap.
