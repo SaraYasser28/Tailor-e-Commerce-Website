@@ -4,6 +4,8 @@
 
 Tailor is a front-end e-commerce web application that allows users to browse products, manage shopping carts and wishlists, and create personal accounts. The application integrates with an external products API and uses LocalStorage to persist user and application data across sessions.
 
+This project was developed as part of Webmaster training in a collaborative team environment, where team members worked together to design, implement, and test the application's core functionality.
+
 ## Features
 
 ### Authentication
@@ -51,3 +53,7 @@ This project strengthened my understanding of JavaScript fundamentals, DOM manip
 * Improve UI/UX and accessibility.
 * Add product search, filtering, and sorting features.
 * Enhance authentication and user account management.
+
+## Team Project
+
+This project was completed as part of Webmaster training and involved collaboration with other trainees throughout the development process. The experience provided practical exposure to teamwork, project organization, version control workflows, and front-end application development.
