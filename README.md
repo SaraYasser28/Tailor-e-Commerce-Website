@@ -1,57 +1,53 @@
-# 🛒 Tailor - E-Commerce Web App
+# Tailor - E-Commerce Web Application
 
-## 📌 Overview
+## Overview
 
-**Tailor** هو تطبيق ويب للتجارة الإلكترونية يتيح للمستخدمين:
+Tailor is a front-end e-commerce web application that allows users to browse products, manage shopping carts and wishlists, and create personal accounts. The application integrates with an external products API and uses LocalStorage to persist user and application data across sessions.
 
-* تصفح المنتجات من خلال API خارجي.
-* إضافة المنتجات إلى **عربة التسوق (Cart)** أو **المفضلة (Wishlist)**.
-* إدارة حساباتهم من خلال **تسجيل الدخول والتسجيل**.
-* تخزين بياناتهم محليًا باستخدام **LocalStorage**.
+## Features
 
----
+### Authentication
 
-## 🚀 Features
+* User registration with name, email, and password.
+* Secure login using registered credentials.
+* Logout functionality with session data removal from LocalStorage.
 
-### 👤 Authentication
+### Product Browsing
 
-* **Register**: إنشاء حساب جديد (Name, Email, Password).
-* **Login**: تسجيل الدخول باستخدام بيانات المستخدم.
-* **Logout**: تسجيل الخروج (إزالة بيانات الجلسة من LocalStorage).
+* Fetches product data from an external API.
+* Displays product information including images, titles, and prices.
+* Allows users to add products directly to their cart or wishlist.
 
-### 🏠 Home
+### Shopping Cart
 
-* صفحة ترحيبية وروابط للتنقل بين الصفحات.
+* View all products added to the cart.
+* Increase or decrease product quantities.
+* Automatically calculate the total cost of items in the cart.
+* Remove individual items or clear the entire cart.
 
-### 🛍️ Products
+### Wishlist
 
-* جلب المنتجات من [DummyJson API](https://dummyjson.com/docs/products).
-* عرض (صورة، اسم، سعر).
-* أزرار: **Add to Cart** و **Add to Wishlist**.
+* Save products for future purchase.
+* Remove products from the wishlist.
+* Move items directly from the wishlist to the shopping cart.
 
-### 🛒 Cart
+## Technologies Used
 
-* عرض المنتجات المضافة للسلة.
-* تحديث الكمية وحساب السعر الإجمالي .
-* حذف منتج معين أو تفريغ السلة بالكامل.
+* HTML5
+* CSS3
+* Bootstrap 5
+* JavaScript (ES6)
+* LocalStorage
+* DummyJSON / Fake Store API
 
-### ❤️ Wishlist
+## Learning Outcomes
 
-* حفظ المنتجات المفضلة.
-* إمكانية حذف منتج من المفضلة أو نقله إلى السلة.
+This project strengthened my understanding of JavaScript fundamentals, DOM manipulation, API integration, state management using LocalStorage, and building responsive user interfaces with Bootstrap.
 
----
+## Future Enhancements
 
-## 🛠️ Tech Stack
-
-* **HTML5, CSS3 (Bootstrap 5), JavaScript (ES6)**
-* **LocalStorage** لإدارة بيانات المستخدم والـ state
-* **Fake Store API** كمصدر للمنتجات
-
----
-
-## 🔮 Future Improvements
-
-* إضافة نظام دفع وهمي (Dummy Payment).
-* تحسين تجربة المستخدم (UI/UX).
-* استخدام Backend حقيقي بدلاً من LocalStorage.
+* Integrate a backend service and database for persistent user data.
+* Implement a mock checkout and payment workflow.
+* Improve UI/UX and accessibility.
+* Add product search, filtering, and sorting features.
+* Enhance authentication and user account management.
